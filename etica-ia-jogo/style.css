@@ -60,3 +60,21 @@ h1 {
 #feedback {
     margin-top: 1rem;
 }
+#podcast-link, #divulgacao-link {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #43a047, #66bb6a);
+}
+#podcast-link:hover, #divulgacao-link:hover {
+    background: linear-gradient(90deg, #388e3c, #4caf50);
+}
+
+.promo-img {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
