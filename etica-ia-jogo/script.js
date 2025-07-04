@@ -1,41 +1,49 @@
 const cases = [
   {
-    text: 'Um algoritmo de crédito aprova mais homens do que mulheres com mesma renda.',
+    text: 'Um sistema de triagem médica prioriza pacientes com histórico de consultas particulares.',
     bias: 'sim',
     ethic: 'nao',
-    explanation: 'Esse é um viés de gênero comum quando os dados históricos usados no treinamento são tendenciosos.'
+    explanation: 'Pode favorecer grupos com maior poder aquisitivo, comprometendo a equidade no atendimento.'
   },
   {
-    text: 'Um software de reconhecimento facial falha mais com rostos negros.',
-    bias: 'sim',
-    ethic: 'nao',
-    explanation: 'Isso evidencia um viés racial frequentemente discutido em pesquisas sobre IA e justiça.'
-  },
-  {
-    text: 'Um algoritmo de contratação exclui candidatos que estudaram em certas universidades.',
-    bias: 'sim',
-    ethic: 'nao',
-    explanation: 'Promover exclusão com base em histórico educacional limita a diversidade e perpetua privilégios.'
-  },
-  {
-    text: 'Um chatbot de atendimento funciona igualmente bem para todos os sotaques do Brasil.',
+    text: 'Um algoritmo de crédito considera apenas dados financeiros objetivos, sem avaliar nome, gênero ou etnia.',
     bias: 'nao',
     ethic: 'sim',
-    explanation: 'Exemplo positivo de tecnologia inclusiva que considera diferentes públicos.'
+    explanation: 'Evita variáveis discriminatórias e promove decisões mais justas.'
   },
   {
-    text: 'Um app de predição policial envia mais viaturas para bairros periféricos.',
+    text: 'Um sistema de recomendação de empregos sugere cargos técnicos apenas para homens.',
     bias: 'sim',
     ethic: 'nao',
-    explanation: 'Um reflexo de dados enviesados que reforçam desigualdades estruturais.'
+    explanation: 'Reproduz estereótipos de gênero e limita oportunidades para mulheres.'
+  },
+  {
+  text: 'Um sistema de IA para distribuição de bolsas prioriza estudantes de baixa renda e escolas públicas.',
+  bias: 'sim',
+  ethic: 'sim',
+  explanation: 'Embora o sistema priorize um grupo específico, isso é feito para corrigir desigualdades históricas e promover equidade.'
+  },
+  {
+    text: 'Um modelo de IA usado em escolas identifica estudantes com dificuldade sem expor dados pessoais.',
+    bias: 'nao',
+    ethic: 'sim',
+    explanation: 'Exemplo de uso ético que protege a privacidade e apoia a inclusão.'
+  },
+  {
+    text: 'Um sistema de análise de currículo descarta automaticamente candidatos com nomes estrangeiros.',
+    bias: 'sim',
+    ethic: 'nao',
+    explanation: 'Pode representar discriminação cultural ou xenofobia, mesmo que involuntária.'
+  },
+  {
+    text: 'Um robô assistente doméstico entende comandos falados por diferentes faixas etárias.',
+    bias: 'nao',
+    ethic: 'sim',
+    explanation: 'Demonstra acessibilidade e respeito à diversidade de usuários.'
   }
-];
+]
 
-const sources = [
-  'Podcast da Nina da Hora sobre viés em IA',
-  'Artigos de pesquisa sobre justiça algorítmica',
-  'Relatórios de instituições de ética em tecnologia'
-];
+
 
 let current = 0;
 let userBias = null;
@@ -48,7 +56,6 @@ const submitBtn = document.getElementById('submit');
 const feedback = document.getElementById('feedback');
 const nextBtn = document.getElementById('next');
 const endScreen = document.getElementById('end');
-const sourcesList = document.getElementById('sources');
 
 function loadCase() {
   const c = cases[current];
